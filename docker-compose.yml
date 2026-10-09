@@ -31,5 +31,12 @@ services:
     ports:
       - "3000:3000"
 
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
 volumes:
   pgdata:
